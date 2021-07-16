@@ -1,0 +1,11 @@
+CONTROLLER
+$request = UserRequest::with(["individual", "institution"])->get();
+return $request;
+
+MODEL
+  public function individual()
+    {
+        return $this->belongsTo(Individual::class);
+    }
+
+
